@@ -24,20 +24,20 @@ createApp({
 
   methods: {
     addTask(){
+      this.errorMsg = ''
       const newText = this.newTask
-      if(newText.length > 4){
+      if(newText.length >= 4){
         this.todoList.unshift({text: newText, done: false })
       }else{
-        this.errorMsg = 'Attenzione! Il testo deve avere almeno 4 caratteri'
-      }
+        this.errorMsg = 'Attenzione! Il testo deve avere almeno 4 caratteri';
+      }     
+      this.newTask = ''     
     },
 
     deleteTask(indice){
       this.todoList.splice(indice, 1)
-    }
-
+    } 
   },
-
 
 
 }).mount('#app')

@@ -36,3 +36,16 @@ AGGIUNTA DI UN TODO
 3. creo un data (stringa) da associare al v-model dell'input
 4. al @keyup.enter dell'input e al @click del bottone .unshift della variabile temporanea nel todo
 5. resetto la variabile temporanea
+
+GESTIONE ERRORE INSERIMENTO
+
+6. creare un data (stringa) messaggio di errore
+7. nella funzione addTask mettere un controllo sulla lunghezza della stringa da aggiungere all'array
+8. SE la stringa < 4 caratteri : valorizzare la variabile errorMsg con il messaggio appropriato
+9. ALTRIMENTI: -> punto 4 e reset errore
+
+
+ELIMAZIONE TODO
+
+10. @click del cestino -> funzione deleteTask passando come parametro l'indice della task da eliminare
+11. deleteTask effettua lo splice dell'indice passato per un solo elemento da eliminare dall'array dei todo
