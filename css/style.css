@@ -6,11 +6,13 @@
 
 body{
   font-family: 'Lato', sans-serif;
+  background-color: #ebebeb;
 }
 
 img{
   max-width: 100%;
 }
+
 
 .container{
   width: 60%;
@@ -45,7 +47,7 @@ img{
 }
 
 .task-container{
-  background-color: #F5F7F7;
+  background-color: #00a74b;
   border-radius: 10px;
   margin-top: 40px;
   padding: 30px;
@@ -55,14 +57,21 @@ img{
   list-style: none;
 
 }
+button{
+  background-color: #0d59af;
+  color: white;
+}
 
 .task-container li{
   line-height: 40px;
   border-bottom: 1px solid lightgray;
   padding: 0 15px;
+  background-color: #001d46;
+  border-radius: 10px;
+  color: white;
 }
 .task-container li:hover{
-  background-color: white;
+  background-color: #0d59af;
 }
 .task-container li i{
   float: right;
@@ -75,4 +84,9 @@ img{
 
 .done{
   text-decoration: line-through;
+  background-color: #fff;
+}
+li.done:hover{
+  text-decoration: line-through;
+  background-color: #830f0f;
 }

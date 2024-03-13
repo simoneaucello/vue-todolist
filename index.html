@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- bootstrap  -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css' integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ==' crossorigin='anonymous'/>
+
   <!-- VueJs  -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -22,13 +25,13 @@
 </head>
 <body>
 
-  <div id="app" class="container">
+  <div id="app" class="container my-5 d-flex justify-content-center flex-column ">
 
-    <div class="logo">
+    <div class="logo mb-5">
       <img src="img/logo.png" alt="logo">
     </div>
 
-    <div class="new-task">
+    <div class="new-task ">
 
       <input
         v-model.trim="newTask"
@@ -40,9 +43,11 @@
     </div>
 
     <div class="task-container">
-      <ul v-if="todoList.length > 0">
+      <ul v-if="todoList.length > 0" class="p-5">
         
-        <li v-for="(task, indice) in todoList"
+        <li 
+        class="p-3"
+        v-for="(task, indice) in todoList"
         @click="task.done = !task.done"
         :class="task.done ? 'done' : ''">
 
