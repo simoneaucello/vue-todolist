@@ -40,13 +40,19 @@
     </div>
 
     <div class="task-container">
-      <ul>
-        <li v-for="(task, indice) in todoList">
-          <span>{{ task.text }}</span>
-          <i class="fa-solid fa-trash-can"></i>
+      <ul v-if="todoList.length > 0">
+        <li v-for="(task, indice) in todoList"
+        
+        >
+          <span         
+          :class="task.done ? 'done' : ''">{{ task.text }}</span>
+          <i v-if="task.done === true"
+          @click.stop="deleteTask(indice)"
+          class="fa-solid fa-trash-can"></i>
         </li>
 
       </ul>
+      <h3 v-else>Non ci sono task!</h3>
 
     </div>
 

@@ -32,6 +32,10 @@ createApp({
       }
     },
 
+    deleteTask(indice){
+      this.todoList.splice(indice, 1)
+    }
+
   },
 
 
